@@ -190,7 +190,7 @@ app.use(function (req, res, next) {
 
   //The path.join has been used for finding the file from its directory. In this case the file was in the Client directory.
 
-  let filePath = path.join(__dirname, "/images", req.url);
+  let filePath = path.join(__dirname, "Coursework/images", req.url);
 
   //The fs.stat is used getting the information about the file.
 
