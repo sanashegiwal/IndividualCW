@@ -223,7 +223,7 @@
                         };
                         this.orders.push(userDetails);
 
-                        fetch('http://localhost:3000/collection/Orders', {
+                        fetch('https://sanaapp3145.herokuapp.com/collection/Orders', {
                             method: 'POST', //seting the HTTP method as 'POST'
                             headers: {
                                 'Content-Type': 'application/json', //Setting the data type being sent as JSON.
@@ -238,7 +238,7 @@
                     localStorage.setItem("Cart", JSON.stringify(this.displayLessonsCart)); 
 
                     for (let i = 0; i < 10; i++) {
-                        fetch('http://localhost:3000/collection/Lesson/' + this.lessons[i]._id, {  //The heroku server and the router for the lessons.
+                        fetch('https://sanaapp3145.herokuapp.com/collection/Lesson' + this.lessons[i]._id, {  //The heroku server and the router for the lessons.
                             method: 'PUT', //Setting the HTTP method as 'PUT'.
                             headers: {
                                 'Content-Type': 'application/json', //Setting the data type as JSON
@@ -259,7 +259,7 @@
         },
         created: function () {  //This Function will be executed when the client front end loads up. Runs when the VUE insatnce is created.
                 //The Fetch has the heroku and the GET collections route
-                fetch('http://localhost:3000/collection/Lesson').then(
+                fetch('https://sanaapp3145.herokuapp.com/collection/Lesson').then(
                     function (response) {   //Returns the result from the Server when the fetch promise resolves.
                         response.json().then(
                             function (json) {
