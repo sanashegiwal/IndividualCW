@@ -13,18 +13,14 @@ const bodyParser = require("body-parser");
  
 
 const app = express(); //This is where the express app has been created by calling the express function.
-app.use(express.static("coursework"));
+app.use(express.static("IndividualCW"));
 app.use(express.static("images"));
 
 app.use("/images", function (req, res, next) {
 
   // middleware' Uses path.join to find the path where the file should be
 
-  var filePath = path.join(__dirname,
-
-      "images"
-
-      , req.url);
+  var filePath = path.join(__dirname, "images", req.url);
 
   // Built-in fs.stat gets info about a file
 
