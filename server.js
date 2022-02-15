@@ -97,17 +97,17 @@ app.use(cors()); //Cors for crossing the origin allowances/domain requests e.g, 
 
 //This is a root message which directs the users to type a URL such as to select an Image file or a Collection.
 
-app.get("/", (req, res, next) => {
+// app.get("/", (req, res, next) => {
 
-  //When the server is loaded it will get this message below.
+//   //When the server is loaded it will get this message below.
 
-  res.send(
+//   res.send(
 
-    "Select a collection, e.g., /collection/collectionName or Select an Image, e.g., /ImageName.png"
+//     "Select a collection, e.g., /collection/collectionName or Select an Image, e.g., /ImageName.png"
 
-  );
+//   );
 
-});
+// });
 
  
 
