@@ -10,38 +10,7 @@ const ObjectID = require("mongodb").ObjectID; //Unique Object ID for the Objects
 
 const bodyParser = require("body-parser");
 
- 
-
-const app = express(); //This is where the express app has been created by calling the express function.
-
-app.use(express.static("Coursework"));
-app.use(express.static("images"));
-
-
-app.use("/images", function (req, res, next) {
-
-  // middleware' Uses path.join to find the path where the file should be
-
-  var filePath = path.join(__dirname,"images" , req.url);
-
-  // Built-in fs.stat gets info about a file
-
-  console.log(filePath + " " + req.url)
-  console.log(Date.now())
-  fs.stat(filePath, function (err, fileInfo) {
-
-      if (err) {
-      next();
-       return;
-
-      }
-
-      if (fileInfo.isFile()) res.sendFile(filePath);
-      else next();
-
-  });
-
-});
+const app= express(); //This is where the express app has been created by calling the express function.
 //Start of the database
 
  
