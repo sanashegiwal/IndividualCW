@@ -1,0 +1,36 @@
+{
+	"info": {
+		"_postman_id": "4f285354-1d50-4d1f-b831-6c175746f31e",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get api",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "https://sanaapp3145.herokuapp.com/collection/Lesson"
+			},
+			"response": []
+		},
+		{
+			"name": "post api",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": "https://sanaapp3145.herokuapp.com/collection/Orders"
+			},
+			"response": []
+		},
+		{
+			"name": "put api",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": "https://sanaapp3145.herokuapp.com/collection/Lesson/61f1c01eaa2e5e828eb170f5"
+			},
+			"response": []
+		}
+	]
+}
