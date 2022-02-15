@@ -13,8 +13,13 @@ const bodyParser = require("body-parser");
 const app= express(); //This is where the express app has been created by calling the express function.
 //Start of the database
 
-app.use(express.static("IndividualCW"));
-app.use(express.static("images"));
+// app.use(express.static("IndividualCW"));
+// app.use(express.static("images"));
+app.get('/', function(req, res) {
+  res.sendFile(path.join(__dirname, '/index.html'));
+});
+
+
 
 app.use("/images", function (req, res, next) {
 
